@@ -1,0 +1,76 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.parent{
+    width: 1300px;
+    height: 800px;
+    background-color: rgb(252, 243, 243);
+    margin: 20px auto;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 100px auto auto 100px; 
+
+    grid-template-areas: "head head head head " 
+                         "one two three side "
+                         "cont cont cont side" 
+                         "foot foot foot foot";
+                         
+    gap: 30px 30px;
+    
+}
+
+header{
+    grid-area: head;
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    font-size: 40px;
+}
+
+.one{
+    grid-area: one;
+    text-align: center;
+    background-color: rgb(47, 255, 64);
+    font-size: 30px;
+}
+
+.two{
+    grid-area: two;
+    text-align: center;
+    background-color: rgb(47, 161, 255);
+    font-size: 30px;
+}
+.three{
+    grid-area: three;
+    text-align: center;
+    background-color: rgb(78, 47, 255);
+    font-size: 30px;
+}
+
+.sidebar{
+    grid-area: side;
+    text-align: center;
+    background-color: rgb(9, 10, 9);
+    font-size: 30px;
+}
+
+.content{
+    
+        grid-area: cont;
+        text-align: center;
+        background-color: rgb(238, 183, 4);
+        font-size: 30px;
+    
+}
+
+footer{
+    grid-area: foot;
+    text-align: center;
+    background-color: rgb(0, 214, 252);
+    font-size: 30px;
+}
